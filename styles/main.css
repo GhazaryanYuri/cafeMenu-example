@@ -133,12 +133,13 @@ body {
             gap: 6px;
 
             li {
-              p {
+              a {
                 display: flex;
                 justify-content: space-between;
                 gap: 8px;
                 font-size: 10px;
                 color: #3b3127;
+                text-decoration: none;
               }
             }
           }
