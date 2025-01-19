@@ -15,10 +15,11 @@
 
 body {
   width: 100%;
-  height: auto;
+  height: 100vh;
   background-color: var(--body-bg);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   header {
     width: 100%;
@@ -59,7 +60,7 @@ body {
 
   main {
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 12px 16px;
     display: flex;
     flex-direction: column;
@@ -170,8 +171,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--footer-bg);
-    position: sticky;
-    bottom: 0;
 
     h4 {
       color: aliceblue;
