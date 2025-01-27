@@ -1,4 +1,4 @@
-import { mainPage } from "../Data/index.js";
+import { mainPage } from "../Data/main.js";
 
 // ------------------------------------------
 
@@ -21,6 +21,9 @@ let innerText = {
 
 // ------------------------------------------
 
+let defaultLang = localStorage.getItem("language");
+localStorage.setItem("language", defaultLang);
+
 // ------------------------------------------
 
 const langAllBtns = document.querySelectorAll(".langBtn");
@@ -31,85 +34,47 @@ langAllBtns.forEach((btn) => {
       langAllBtns[i].classList.remove("active");
     }
 
-    if (btn.id === "hy") {
-      innerText.headerContent["headerTitle"].innerText =
-        mainPage.header.title["hy"];
-      innerText.headerContent["headerSubtitle"].innerText =
-        mainPage.header.subtitle["hy"];
+    defaultLang = btn.getAttribute("data-lang");
+    localStorage.setItem("language", defaultLang);
+    btn.classList.add("active");
 
-      // ----------------------------------------------------
-
-      innerText.mainContent.titleBar.cafeTitle.innerText =
-        mainPage.main.mainTitle["hy"];
-      innerText.mainContent.titleBar.cafeInfo.innerText =
-        mainPage.main.mainDescription["hy"];
-
-      mainPage.categories.forEach((categoria, index) => {
-        innerText.mainContent.mainCategories[index].innerText =
-          mainPage.categories[index]["hy"];
-      });
-
-      //   ---------------------------------------------------
-
-      innerText.footerContent.footerText.innerText =
-        mainPage.footer.orderOnline["hy"];
-
-      // -----------------------------------------------------
-
-      btn.classList.add("active");
-    } else if (btn.id === "ru") {
-      innerText.headerContent["headerTitle"].innerText =
-        mainPage.header.title["ru"];
-      innerText.headerContent["headerSubtitle"].innerText =
-        mainPage.header.subtitle["ru"];
-
-      // ----------------------------------------------------
-
-      innerText.mainContent.titleBar.cafeTitle.innerText =
-        mainPage.main.mainTitle["ru"];
-      innerText.mainContent.titleBar.cafeInfo.innerText =
-        mainPage.main.mainDescription["ru"];
-
-      mainPage.categories.forEach((categoria, index) => {
-        innerText.mainContent.mainCategories[index].innerText =
-          mainPage.categories[index]["ru"];
-      });
-
-      //   ---------------------------------------------------
-
-      innerText.footerContent.footerText.innerText =
-        mainPage.footer.orderOnline["ru"];
-
-      // -----------------------------------------------------
-
-      btn.classList.add("active");
-      localStorage.setItem("active", btn.innerText);
-    } else {
-      innerText.headerContent["headerTitle"].innerText =
-        mainPage.header.title["en"];
-      innerText.headerContent["headerSubtitle"].innerText =
-        mainPage.header.subtitle["en"];
-
-      // ----------------------------------------------------
-
-      innerText.mainContent.titleBar.cafeTitle.innerText =
-        mainPage.main.mainTitle["en"];
-      innerText.mainContent.titleBar.cafeInfo.innerText =
-        mainPage.main.mainDescription["en"];
-
-      mainPage.categories.forEach((categoria, index) => {
-        innerText.mainContent.mainCategories[index].innerText =
-          mainPage.categories[index]["en"];
-      });
-
-      //   ---------------------------------------------------
-
-      innerText.footerContent.footerText.innerText =
-        mainPage.footer.orderOnline["en"];
-
-      // -----------------------------------------------------
-
-      btn.classList.add("active");
-    }
+    defaultLanguage();
   });
+
+  if (btn.id === localStorage.getItem("language")) {
+    for (let i = 0; i < langAllBtns.length; i++) {
+      langAllBtns[i].classList.remove("active");
+    }
+
+    btn.classList.add("active");
+  }
 });
+
+// ----------------------------------------------
+
+function defaultLanguage() {
+  innerText.headerContent.headerTitle.innerText =
+    mainPage.header.title[defaultLang];
+  innerText.headerContent.headerSubtitle.innerText =
+    mainPage.header.subtitle[defaultLang];
+
+  // --------------------------------------------------
+
+  innerText.mainContent.titleBar.cafeTitle.innerText =
+    mainPage.main.mainTitle[defaultLang];
+  innerText.mainContent.titleBar.cafeInfo.innerText =
+    mainPage.main.mainDescription[defaultLang];
+
+  // ---------------------------------------------------
+
+  innerText.mainContent.mainCategories.forEach((categoria, index) => {
+    categoria.innerText = mainPage.categories[index][defaultLang];
+  });
+
+  // ----------------------------------------------------
+
+  innerText.footerContent.footerText.innerText =
+    mainPage.footer.orderOnline[defaultLang];
+}
+
+defaultLanguage();

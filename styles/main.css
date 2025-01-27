@@ -23,7 +23,7 @@ body {
 
   header {
     width: 100%;
-    height: 80px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +61,7 @@ body {
         padding: 2px 4px;
         border-radius: 50px;
         transition: 0.2s all;
+        cursor: pointer;
 
         span {
           color: white;
@@ -198,6 +199,10 @@ body {
             width: 120px;
             height: 80px;
           }
+        }
+
+        &:nth-child(2n) {
+          flex-direction: row-reverse;
         }
       }
     }
