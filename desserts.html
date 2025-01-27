@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafe Menu</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="img/veranda-cafe-icon.avif" />
   </head>
   <body>
     <header>
@@ -12,83 +13,40 @@
         <img src="img/veranda-cafe-icon.avif" alt="veranda-cafe-icon" />
       </div>
       <div class="languageSwitcher">
-        <div class="langBtn" id="en">
+        <div class="langBtn" data-lang="en" id="en">
           <img src="https://flagsapi.com/GB/flat/16.png" />
           <span>English</span>
         </div>
-        <div class="langBtn" id="ru">
+        <div class="langBtn" data-lang="ru" id="ru">
           <img src="https://flagsapi.com/RU/flat/16.png" />
           <span>Russian</span>
         </div>
-        <div class="langBtn active" id="hy">
+        <div class="langBtn active" data-lang="hy" id="hy">
           <img src="https://flagsapi.com/AM/flat/16.png" />
           <span>Armenian</span>
         </div>
       </div>
       <div class="title">
-        <h1>Veranda Cafe</h1>
-        <p>Fresh, Seafood since 1980</p>
+        <h1 id="cafeTitle"></h1>
+        <p id="cafeSubtitle"></p>
       </div>
     </header>
     <main>
       <div class="categories">
         <ul class="navbarLinks">
-          <li><a href="index.html">Գլխավոր էջ</a></li>
-          <li><a href="appetizers.html">Նախուտեստներ</a></li>
-          <li><a href="main-dishes.html">Գլխավոր ուտեստներ</a></li>
-          <li><a href="drinks.html">Խմիչքներ</a></li>
-          <li><a href="#" class="active">Աղանդեր</a></li>
+          <li><a class="nav-categories" href="index.html"></a></li>
+          <li><a class="nav-categories" href="appetizers.html"></a></li>
+          <li><a class="nav-categories" href="main-dishes.html"></a></li>
+          <li><a class="nav-categories" href="drinks.html"></a></li>
+          <li>
+            <a href="#" class="active nav-categories"></a>
+          </li>
         </ul>
       </div>
-      <div class="menu">
-        <div class="item">
-          <div class="food-info">
-            <h5>Թխվածքներ</h5>
-            <ul>
-              <li>
-                <a href="#">Նապոլեոն<span>1,750</span></a>
-              </li>
-              <li>
-                <a href="#">Շոկոլադե տորթ<span>2,000</span></a>
-              </li>
-              <li>
-                <a href="#">Չիզքեյք<span>2,500</span></a>
-              </li>
-              <li>
-                <a href="#">Տիրամիսու<span>2,500</span></a>
-              </li>
-              <li>
-                <a href="#">Էկլեր<span>1,500</span></a>
-              </li>
-            </ul>
-          </div>
-          <div class="food-img">
-            <img src="img/food-img-11.jpg" alt="food-img-11" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="food-img">
-            <img src="img/food-img-12.jpg" alt="food-img-12" />
-          </div>
-          <div class="food-info">
-            <h5>Պաղպաղակ (1 գնդիկ)</h5>
-            <ul>
-              <li>
-                <a href="#">Վանիլային/Շոկոլադե<span>750</span></a>
-              </li>
-              <li>
-                <a href="#">Մրգային<span>700</span></a>
-              </li>
-              <li>
-                <a href="#">Նուտելլայով<span>1,000</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div class="menu" id="menu-content"></div>
     </main>
     <footer>
-      <h4>Order-Online: +123-45-678-901</h4>
+      <h4 id="footer-text"></h4>
     </footer>
 
     <script src="scripts/desserts.js" type="module"></script>

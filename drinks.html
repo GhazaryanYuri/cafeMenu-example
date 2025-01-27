@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafe Menu</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="img/veranda-cafe-icon.avif" />
   </head>
   <body>
     <header>
@@ -12,111 +13,42 @@
         <img src="img/veranda-cafe-icon.avif" alt="veranda-cafe-icon" />
       </div>
       <div class="languageSwitcher">
-        <div class="langBtn" id="en">
+        <div class="langBtn" data-lang="en" id="en">
           <img src="https://flagsapi.com/GB/flat/16.png" />
           <span>English</span>
         </div>
-        <div class="langBtn" id="ru">
+        <div class="langBtn" data-lang="ru" id="ru">
           <img src="https://flagsapi.com/RU/flat/16.png" />
           <span>Russian</span>
         </div>
-        <div class="langBtn active" id="hy">
+        <div class="langBtn active" data-lang="hy" id="hy">
           <img src="https://flagsapi.com/AM/flat/16.png" />
           <span>Armenian</span>
         </div>
       </div>
       <div class="title">
-        <h1>Veranda Cafe</h1>
-        <p>Fresh, Seafood since 1980</p>
+        <h1 id="cafeTitle"></h1>
+        <p id="cafeSubtitle"></p>
       </div>
     </header>
     <main>
       <div class="categories">
         <ul class="navbarLinks">
-          <li><a href="index.html">Գլխավոր էջ</a></li>
-          <li><a href="appetizers.html">Նախուտեստներ</a></li>
-          <li><a href="main-dishes.html">Գլխավոր ուտեստներ</a></li>
-          <li><a href="#" class="active">Խմիչքներ</a></li>
-          <li><a href="desserts.html">Աղանդեր</a></li>
+          <li><a class="nav-categories" href="index.html"></a></li>
+          <li>
+            <a class="nav-categories" href="appetizers.html"></a>
+          </li>
+          <li>
+            <a class="nav-categories" href="main-dishes.html"></a>
+          </li>
+          <li><a href="#" class="active nav-categories"></a></li>
+          <li><a class="nav-categories" href="desserts.html"></a></li>
         </ul>
       </div>
-      <div class="menu">
-        <div class="item">
-          <div class="food-info">
-            <h5>Տաք ըմպելիքներ</h5>
-            <ul>
-              <li>
-                <a href="#">Էսպրեսո<span>1,000</span></a>
-              </li>
-              <li>
-                <a href="#">Կապուչինո<span>1,500</span></a>
-              </li>
-              <li>
-                <a href="#">Լատտե <span>1,750</span></a>
-              </li>
-              <li>
-                <a href="#">Սև/Կանաչ թեյ<span>800</span></a>
-              </li>
-              <li>
-                <a href="#">Մրգային թեյ<span>1,000</span></a>
-              </li>
-            </ul>
-          </div>
-          <div class="food-img">
-            <img src="img/food-img-8.jpg" alt="food-img-8" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="food-img">
-            <img src="img/food-img-9.jpg" alt="food-img-9" />
-          </div>
-          <div class="food-info">
-            <h5>Զովացուցիչ ըմպելիքներ</h5>
-            <ul>
-              <li>
-                <a href="#">Թարմ հյութեր<span>1,250</span></a>
-              </li>
-              <li>
-                <a href="#">Լիմոնադներ<span>1,000</span></a>
-              </li>
-              <li>
-                <a href="#">Կոկա-կոլա/Ֆանտա/Սպրայթ<span>700</span></a>
-              </li>
-              <li>
-                <a href="#">Հանքային ջուր<span>500</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="item">
-          <div class="food-info">
-            <h5>Ալկոհոլային</h5>
-            <ul>
-              <li>
-                <a href="#">Գինի (բաժակ)<span>2,000</span></a>
-              </li>
-              <li>
-                <a href="#">Գարեջուր (0.5լ)<span>1,250</span></a>
-              </li>
-              <li>
-                <a href="#">Օղի (50մլ)<span>1,250</span></a>
-              </li>
-              <li>
-                <a href="#">Կոնյակ (50մլ)<span>1,750</span></a>
-              </li>
-              <li>
-                <a href="#">Վիսկի (50մլ)<span>3,000</span></a>
-              </li>
-            </ul>
-          </div>
-          <div class="food-img">
-            <img src="img/food-img-10.jpg" alt="food-img-10" />
-          </div>
-        </div>
-      </div>
+      <div class="menu" id="menu-content"></div>
     </main>
     <footer>
-      <h4>Order-Online: +123-45-678-901</h4>
+      <h4 id="footer-text"></h4>
     </footer>
 
     <script src="scripts/drinks.js" type="module"></script>

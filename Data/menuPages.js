@@ -155,8 +155,8 @@ export const menuPage = {
         imgSrc: "img/food-img-4.jpg",
       },
     ],
-    MainDishes: {
-      meatDishes: {
+    MainDishes: [
+      {
         title: {
           en: "Meat Dishes",
           ru: "Мясные блюда",
@@ -212,8 +212,9 @@ export const menuPage = {
             price: "5,000",
           },
         ],
+        imgSrc: "img/food-img-5.jpg",
       },
-      fishDishes: {
+      {
         title: {
           en: "Fish Dishes",
           ru: "Блюда из рыбы",
@@ -261,8 +262,9 @@ export const menuPage = {
             price: "6,000",
           },
         ],
+        imgSrc: "img/food-img-6.jpg",
       },
-      poultryDishes: {
+      {
         title: {
           en: "Poultry Dishes",
           ru: "Блюда из птицы",
@@ -302,10 +304,11 @@ export const menuPage = {
             price: "3,800",
           },
         ],
+        imgSrc: "img/food-img-7.jpg",
       },
-    },
-    Drinks: {
-      hotDrinks: {
+    ],
+    Drinks: [
+      {
         title: {
           en: "Hot Drinks",
           ru: "Горячие напитки",
@@ -337,8 +340,9 @@ export const menuPage = {
             price: "1,000",
           },
         ],
+        imgSrc: "img/food-img-8.jpg",
       },
-      coldDrinks: {
+      {
         title: {
           en: "Cold Drinks",
           ru: "Холодные напитки",
@@ -370,8 +374,9 @@ export const menuPage = {
             price: "500",
           },
         ],
+        imgSrc: "img/food-img-9.jpg",
       },
-      alcoholicDrinks: {
+      {
         title: {
           en: "Alcoholic Drinks",
           ru: "Алкогольные напитки",
@@ -415,10 +420,11 @@ export const menuPage = {
             price: "3,000",
           },
         ],
+        imgSrc: "img/food-img-10.jpg",
       },
-    },
-    Desserts: {
-      cakes: {
+    ],
+    Desserts: [
+      {
         title: {
           en: "Cakes",
           ru: "Торты",
@@ -450,8 +456,9 @@ export const menuPage = {
             price: "1,500",
           },
         ],
+        imgSrc: "img/food-img-11.jpg",
       },
-      iceCream: {
+      {
         title: {
           en: "Ice Cream (1 scoop)",
           ru: "Мороженое (1 шарик)",
@@ -475,7 +482,8 @@ export const menuPage = {
             price: "1,000",
           },
         ],
+        imgSrc: "img/food-img-12.jpg",
       },
-    },
+    ],
   },
 };
