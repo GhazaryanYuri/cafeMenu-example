@@ -11,34 +11,56 @@
       <div class="cafeIcon">
         <img src="img/veranda-cafe-icon.avif" alt="veranda-cafe-icon" />
       </div>
+      <div class="languageSwitcher">
+        <div class="langBtn" id="en">
+          <img src="https://flagsapi.com/GB/flat/16.png" />
+          <span>English</span>
+        </div>
+        <div class="langBtn" id="ru">
+          <img src="https://flagsapi.com/RU/flat/16.png" />
+          <span>Russian</span>
+        </div>
+        <div class="langBtn active" id="hy">
+          <img src="https://flagsapi.com/AM/flat/16.png" />
+          <span>Armenian</span>
+        </div>
+      </div>
       <div class="title">
-        <h1>Veranda Cafe</h1>
-        <p>Fresh, Seafood since 1980</p>
+        <h1 id="cafeTitle">Վերանդա Սրճարան</h1>
+        <p id="cafeSubtitle">
+          Թարմ ծովամթերք <br />
+          1980 թվականից
+        </p>
       </div>
     </header>
     <main>
       <div class="mainTitle">
-        <h1>This is your cafe Title</h1>
-        <p>
-          Here will be about your cafe story, when it was created, who is the
-          administrator, who is director, and other
-          <span>short information.</span>
+        <h1 id="main-cafeTitle">Սա ձեր սրճարանի վերնագիրն է</h1>
+        <p id="main-cafeInfo">
+          Այստեղ կլինի ձեր սրճարանի պատմությունը, երբ այն ստեղծվել է, ով է
+          ադմինիստրատորը, ով է տնօրենը, և այլ կարճ տեղեկություններ։
         </p>
       </div>
       <div class="categories">
         <ul class="navbarLinks">
-          <li><a href="#" class="active">Գլխավոր էջ</a></li>
-          <li><a href="appetizers.html">Նախուտեստներ</a></li>
-          <li><a href="main-dishes.html">Գլխավոր ուտեստներ</a></li>
-          <li><a href="drinks.html">Խմիչքներ</a></li>
-          <li><a href="desserts.html">Աղանդեր</a></li>
+          <li><a href="#" class="active nav-categories">Գլխավոր էջ</a></li>
+          <li>
+            <a class="nav-categories" href="appetizers.html">Նախուտեստներ</a>
+          </li>
+          <li>
+            <a class="nav-categories" href="main-dishes.html"
+              >Գլխավոր ուտեստներ</a
+            >
+          </li>
+          <li><a class="nav-categories" href="drinks.html">Խմիչքներ</a></li>
+          <li><a class="nav-categories" href="desserts.html">Աղանդեր</a></li>
         </ul>
       </div>
     </main>
     <footer>
-      <h4>Order-Online: +123-45-678-901</h4>
+      <h4 id="footer-text">Առցանց պատվեր: +123-45-678-901</h4>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" type="module"></script>
   </body>
 </html>
