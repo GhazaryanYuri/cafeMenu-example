@@ -21,7 +21,7 @@ let innerText = {
 
 // ------------------------------------------
 
-let defaultLang = localStorage.getItem("language" || "en");
+let defaultLang = localStorage.getItem("language" || "hy");
 localStorage.setItem("language", defaultLang);
 
 // ------------------------------------------
